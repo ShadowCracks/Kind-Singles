@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "data": [
+    { "id": "1", "text": "PHILOSOPHY", "width": 120 },
+    { "id": "2", "text": "BAD JOKES", "width": 95 },
+    { "id": "3", "text": "GAMING", "width": 75 },
+    { "id": "4", "text": "VOLUNTEERING", "width": 130 },
+    { "id": "5", "text": "EXTREME SPORTS", "width": 145 }
+  ]
+}

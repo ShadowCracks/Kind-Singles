@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": "1",
+      "title": "\"What kind of weird are you?\"",
+      "content": "I eat cereal with a fork so the milk doesn't get in the way of the crunch. Don't judge me.",
+      "order": 1
+    },
+    {
+      "id": "2", 
+      "title": "\"What do you imagine being like... together?\"",
+      "content": "I imagine us laughing over inside jokes while cooking dinner together, music playing in the background. We'd support each other's weird ideas and big dreams, and take turns being the calm one when life gets messy. Lazy Sunday mornings would be our thing—reading, cuddling, or just doing nothing in particular. Even the errands would feel lighter, knowing we're in it together.",
+      "order": 2
+    }
+  ]
+}

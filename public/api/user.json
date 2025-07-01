@@ -1,0 +1,42 @@
+{
+  "user": {
+    "id": 1,
+    "name": "Sophie",
+    "age": 30,
+    "location": "Toronto ON",
+    "lookingFor": "Man",
+    "ageRange": "28-40",
+    "profileImage": "/images/profile.png",
+    "preferences": {
+      "title": "This matters to me:",
+      "items": [
+        "Non-smoker",
+        "Light drinker", 
+        "Open to kids",
+        "Helps maintain clean home"
+      ]
+    },
+    "contactMethods": [
+      {
+        "type": "envelope",
+        "icon": "/images/Envelopeicon.png",
+        "dimensions": { "width": 29.37, "height": 20 }
+      },
+      {
+        "type": "heart",
+        "icon": "/images/Bluehearticon.png", 
+        "dimensions": { "width": 26, "height": 27 }
+      },
+      {
+        "type": "audio",
+        "icon": "/images/Audioicon.png",
+        "dimensions": { "width": 17.95, "height": 25 }
+      },
+      {
+        "type": "video", 
+        "icon": "/images/videoIcon.png",
+        "dimensions": { "width": 38, "height": 38 }
+      }
+    ]
+  }
+}

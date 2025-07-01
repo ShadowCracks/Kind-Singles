@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": [
+    { "label": "Orientation", "value": "Heterosexual" },
+    { "label": "Ethnicity", "value": "Caucasian" },
+    { "label": "Longest Relat.", "value": "5+ Years" },
+    { "label": "Height", "value": "5' 5\"" },
+    { "label": "Body Type", "value": "Athletic" },
+    { "label": "Hair Colour", "value": "Blonde" },
+    { "label": "Diet", "value": "Ketovore" },
+    { "label": "Smokes", "value": "No" },
+    { "label": "Alcohol", "value": "Socially" },
+    { "label": "Drugs", "value": "No" },
+    { "label": "Marijuana", "value": "No" },
+    { "label": "Western Zodiac", "value": "Taurus" },
+    { "label": "Chinese Zodiac", "value": "Rabbit" },
+    { "label": "Religion", "value": "Spiritual" },
+    { "label": "Education", "value": "University" },
+    { "label": "Status", "value": "Single" },
+    { "label": "Free Time", "value": "Eves/Weekends" },
+    { "label": "Offspring I Desire", "value": "No | Open" },
+    { "label": "Employment", "value": "Full time" },
+    { "label": "Healthcare", "value": "East & West" },
+    { "label": "Therapy Views", "value": "Open" },
+    { "label": "Personal Growth", "value": "A Priority" },
+    { "label": "Pets", "value": "Cat" },
+    { "label": "Dwelling", "value": "House" },
+    { "label": "Political Views", "value": "Right Leaning" },
+    { "label": "Upbringing", "value": "Small Town" }
+  ]
+}
