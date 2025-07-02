@@ -6,6 +6,7 @@ import Hobby from './components/Hobby'
 import ProfileContent from './components/ProfileContent'
 import RightTables from './components/RightTables'
 import AuthWrapper from './components/AuthWrapper'
+import MyHobby from './components/MyHobby'
 
 
 function App() {
@@ -13,10 +14,10 @@ function App() {
 
   return (
     <AuthWrapper>
-      <div style={{ backgroundColor: '#fff7f7', minHeight: '100vh', width: '100%' }}>
+      <div className="relative min-h-screen bg-[#fff6f7]">
         <Navbar />
         {/* SVG lines background */}
-        <svg
+        {/* <svg
           className="absolute"
           width="1183"
           height="1782"
@@ -35,13 +36,14 @@ function App() {
             ry="10"
           />
         </svg>
-        <Hero onLoaded={() => setHeroLoaded(true)} />
-        {heroLoaded && (
-          <>
-            <Hobby />
+        <Hero onLoaded={() => setHeroLoaded(true)} /> */}
+        {!heroLoaded && (
+          <div className="flex items-center justify-center  container mx-auto p-4">
+            {/* <Hobby />
             <ProfileContent />
-            <RightTables />
-          </>
+            <RightTables /> */}
+            <MyHobby />
+          </div>
         )}
       </div>
     </AuthWrapper>

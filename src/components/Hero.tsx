@@ -35,11 +35,11 @@ function Hero({ onLoaded }: HeroProps) {
       try {
         await new Promise(resolve => setTimeout(resolve, 3000));
         const response = await fetch('/api/user.json');
-        
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+
         const data = await response.json();
         setUserData(data);
       } catch (error) {
@@ -57,7 +57,7 @@ function Hero({ onLoaded }: HeroProps) {
     return (
       <div className="relative">
         {/* Skeleton for profile image - matches actual image dimensions */}
-        <div 
+        <div
           className="absolute bg-gray-200 animate-pulse rounded"
           style={{
             left: '190px',
@@ -66,9 +66,9 @@ function Hero({ onLoaded }: HeroProps) {
             height: '186px'
           }}
         />
-        
+
         {/* Skeleton for user name */}
-        <div 
+        <div
           className="absolute bg-gray-200 animate-pulse rounded"
           style={{
             left: '420px',
@@ -77,7 +77,7 @@ function Hero({ onLoaded }: HeroProps) {
             height: '40px'
           }}
         />
-        
+
         {/* Dynamic skeleton for info items (age/location and looking for info) */}
         {[0, 1].map((index) => (
           <div key={index} className="absolute flex items-center" style={{ left: index === 0 ? '420px' : '588px', top: '115px' }}>
@@ -85,7 +85,7 @@ function Hero({ onLoaded }: HeroProps) {
             <div className={`h-5 bg-gray-200 animate-pulse rounded ${index === 0 ? 'w-32' : 'w-40'}`} />
           </div>
         ))}
-        
+
         {/* Skeleton for preferences section */}
         <div className="absolute" style={{ left: '414px', top: '155px' }}>
           <div className="w-48 h-6 bg-gray-200 animate-pulse rounded mb-2" />
@@ -100,7 +100,7 @@ function Hero({ onLoaded }: HeroProps) {
             </div>
           </div>
         </div>
-        
+
         {/* Skeleton for contact method icons */}
         <div className="absolute flex items-center space-x-2" style={{ left: '203px', top: '250px' }}>
           <div className="w-8 h-6 bg-gray-200 animate-pulse rounded" />
@@ -149,41 +149,44 @@ function Hero({ onLoaded }: HeroProps) {
   };
 
   return (
-    <div className="relative">
-      <div className="absolute" style={{ left: '190px', top: '65px', width: '170.53px', height: '186px' }}>
-        <img 
-          src={profileImage} 
-          alt="Profile" 
+    <div className="flex flex-col items-start relative" >
+      <div className="" style={{ left: '190px', top: '65px', width: '170.53px', height: '186px' }}>
+        <img
+          src={profileImage}
+          alt="Profile"
           className="w-full h-full object-cover"
         />
       </div>
-      
+
       {/* User name - large, bold heading */}
-      <h1 
-        className="absolute text-black"
-        style={{
-          left: '420px',
-          top: '65px',
-          fontFamily: 'Rounded Mplus 1c',
-          fontSize: '40px',
-          fontWeight: '800',
-          letterSpacing: '2%'
-        }}
-      >
-        {user.name}
-      </h1>
-      
-      {/* Dynamic info items with ellipse bullets */}
-      {/* This renders age/location and looking-for info in a flexible way */}
-      {infoItems.map((item, index) => (
-        <div key={index} className="absolute flex items-center" style={{ left: item.left, top: '115px' }}>
-          <img src={Ellipse16} alt="Ellipse" style={{ width: '15px', height: '15px', marginRight: '8px' }} />
-          <span style={{ fontFamily: 'Sarabun', fontSize: '20px', color: 'black' }}>
-            {item.text}
-          </span>
-        </div>
-      ))}
-      
+      <div>
+        <h1
+          className="absolute text-black"
+          style={{
+            left: '420px',
+            top: '65px',
+            fontFamily: 'Rounded Mplus 1c',
+            fontSize: '40px',
+            fontWeight: '800',
+            letterSpacing: '2%'
+          }}
+        >
+          {user.name}
+        </h1>
+
+        {/* Dynamic info items with ellipse bullets */}
+        {/* This renders age/location and looking-for info in a flexible way */}
+        {infoItems.map((item, index) => (
+          <div key={index} className="absolute flex items-center" style={{ left: item.left, top: '115px' }}>
+            <img src={Ellipse16} alt="Ellipse" style={{ width: '15px', height: '15px', marginRight: '8px' }} />
+            <span style={{ fontFamily: 'Sarabun', fontSize: '20px', color: 'black' }}>
+              {item.text}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      {/* Profile image with rounded corners */}
       {/* User preferences section - "This matters to me" */}
       <div className="absolute" style={{ left: '414px', top: '155px' }}>
         <h3 style={{ fontFamily: 'Sarabun', fontSize: '22px', fontWeight: '800', color: 'black', margin: '0 0 5px 0' }}>
@@ -209,22 +212,21 @@ function Hero({ onLoaded }: HeroProps) {
           </div>
         </div>
       </div>
-      
+
       <div className="absolute flex items-center space-x-2" style={{ left: '203px', top: '250px' }}>
         {user.contactMethods.map((method, index) => (
-          <div key={index} style={{ 
-            width: `${method.dimensions.width}px`, 
+          <div key={index} style={{
+            width: `${method.dimensions.width}px`,
             height: `${method.dimensions.height}px`,
-            display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
           }}>
-            <img 
-              src={iconMap[method.type]} 
-              alt={method.type} 
-              style={{ 
-                width: `${method.dimensions.width}px`, 
-                height: `${method.dimensions.height}px` 
+            <img
+              src={iconMap[method.type]}
+              alt={method.type}
+              style={{
+                width: `${method.dimensions.width}px`,
+                height: `${method.dimensions.height}px`
               }}
             />
           </div>
